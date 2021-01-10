@@ -5,6 +5,7 @@ const middle = function(array) {
   }
   let middleOneIndex = Math.floor((array.length) / 2);
   let middleOne = array[middleOneIndex];
+  console.log(`this is ${middleOne}`)
   midNum.push(middleOne);
   if (array.length % 2 === 0) {
     let middleTwoIndex = middleOneIndex + 1;
