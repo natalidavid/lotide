@@ -1,25 +1,20 @@
+const assertArraysEqual = require('./assertArraysEqual');
+
 const middle = function(array) {
-  let midNum = [];
+  let middleArray = [];
   if (array.length < 3) {
-    return midNum;
-  }
-  let middleOneIndex = Math.floor((array.length) / 2);
-  let middleOne = array[middleOneIndex];
-  console.log(`this is ${middleOne}`)
-  midNum.push(middleOne);
+    return middleArray;
+  } 
+  let middleOneIndex = Math.floor((array.length - 1 ) / 2);
+  var middleOne = array[middleOneIndex]
+  middleArray.push(middleOne);
   if (array.length % 2 === 0) {
-    let middleTwoIndex = middleOneIndex + 1;
-    let middleTwo = array[middleTwoIndex];
-    midNum.push(middleTwo);
+    let middleTwoIndex = middleOneIndex + 1
+    let middleTwo = array[middleTwoIndex]
+    middleArray.push(middleTwo);
+
   }
-  return midNum;
-};
+  return middleArray;
+;}
 
-console.log(middle([1])); // => []
-console.log(middle([1, 2])); // => []
-
-console.log(middle([1, 2, 3])); // => [2])
-console.log(middle([1, 2, 3, 4, 5])); // => [3]
-
-console.log(middle([1, 2, 3, 4]));
-console.log(middle([1, 2, 3, 4, 5, 6]));
+module.exports = middle;
