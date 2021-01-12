@@ -38,3 +38,8 @@ const assertObjectsEqual = function(actual, expected) {
     console.log(`🛑🛑🛑 Array Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
   }
 };
+
+const person = {
+  firstName: 'Bob',  // <= property containing data
+  lastName:  'Smith' // <= ditto
+}

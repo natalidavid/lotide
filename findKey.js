@@ -1,6 +1,6 @@
 let findKey = function (object, callback) {
   for (let key in object) {
-    console.log(key)
+    //console.log(key)
     if (callback(object[key])) {
       console.log(callback(object[key]))
       return key;
